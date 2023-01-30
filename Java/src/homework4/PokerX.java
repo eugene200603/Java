@@ -1,0 +1,75 @@
+//亂數練習-Poker
+//發撲克牌(52張)，分為四組列印出來。 
+//提示：使用Math.Random() -- 產生大於0.0小於1.0的浮點數 
+//(int)(Math.Random() * 52) -- 會產生0至51的值 
+package homework4;
+
+public class PokerX {
+	
+	static void shape() {
+		String s;
+		int i;
+		do {
+			  i=(int)(Math.random()*3.9999);
+			  switch(i) {
+			  case 0:
+				  s="黑桃";
+				  System.out.print(s);
+				  break;
+			  case 1:
+				  s="紅心";
+				  System.out.print(s);
+				  break;
+			  case 2:
+				  s="方塊";
+				  System.out.print(s);
+				  break;
+			  case 3:
+				  s="梅花";
+				  System.out.print(s);
+				  break;
+				default:
+					break;
+			  }
+		  }while(false);
+		  
+	}
+	
+	 static void number() {
+		 String[] n= {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
+		 do {
+			int i=(int)(Math.random()*12.9999);
+			 System.out.print(n[i]);
+		 }while(false);
+	 }
+	 
+	 static void card() {
+		 String[][] card=new String[4][13];
+		 for(int i=0;i<card.length;i++) {
+			 for(int j=0;j<card[i].length;j++) {
+				 card[i][j]=
+			 }
+		 }
+	 }
+		static void player() {
+			int p=4;  //玩家數
+		
+			for(int i=1;i<=p;i++ ) {
+				System.out.print("玩家"+i+":");
+				for(int j=1;j<=5;j++) {                //發牌數
+					
+					shape();
+					number();
+					System.out.print("  ");
+				}
+				System.out.println();
+			}
+		}	
+		 
+	 
+	public static void main(String[] args) {
+		player();
+	}
+}
+
+

@@ -1,0 +1,66 @@
+package homework4;
+
+public class Poker {
+
+	static String[] card() {
+		String[] card=new String[52];
+		String[] shape= {"黑桃","紅心","方塊","梅花"};
+		String[] num= {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
+		int j=0;
+	 for(int i=0;i<52;i++) {
+				if(i<13) {					
+					card[i]=shape[0]+num[j];
+					}
+				else if(i>=13 && i<26){
+					card[i]=shape[1]+num[j];
+					}
+				else if(i>=26 && i<39){
+					card[i]=shape[2]+num[j];
+					}
+					else if(i>=39 ){
+					card[i]=shape[3]+num[j];
+					}				
+				j++;
+				if(j>12) {
+					j=0;
+				}
+			}			        
+	        return card;
+	}
+	  
+	static String[] check() {
+		String[] check=card();
+		String[] get= {"","","","",""};
+		for(int i=0;i<5;i++) {
+			int r=(int)(Math.random()*51.99999);				  
+				  if(get[i].equals(check[r])) {
+					  continue;
+				  }
+				  else {
+					  get[i]=check[r];
+				  }		  			  
+		}
+		return get;
+		
+		}
+	 
+	  static void player() {
+		  int p=4;
+		  for(int i=1;i<=p;i++) {
+			  System.out.print("玩家"+i+":  ");
+			  				    
+			  check();
+				  
+				System.out.println();
+			  }			  
+		  }
+	  
+	
+	public static void main(String[] args) {
+		player();
+   
+
+
+	}
+
+}
