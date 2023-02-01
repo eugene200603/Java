@@ -53,7 +53,7 @@ public class Verifier {
 		}
 		System.out.print("六個英文數字驗證碼:");
 		 for (int j=0;j<8;j++) {
-			 num=(int)(Math.random()*62.999999);
+			 num=(int)(Math.random()*61.999999);
 			 arr[j]=arr[num];
 			 System.out.print((char)arr[j]);
 		 }

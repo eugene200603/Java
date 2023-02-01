@@ -1,0 +1,28 @@
+package homework5_4;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Filewrite {
+
+	public static void main(String[] args) {
+		try {
+			FileWriter fw=new FileWriter("C:\\javagit\\file\\Employee.txt");
+			   fw.write("3\"CC\",\"F\",\"2020-03-01\",\"093333333\",\"eee@mail.com\",28000");
+			   fw.write("2\"BB\",\"M\",\"2020-02-01\",\"092222222\",\"www@mail.com\",25000");
+			   fw.write("1\"HH\",\"F\",\"2010-07-22\",\"093784513\",\"ghe@mail.com\",35000");
+			   fw.write("4\"DD\",\"F\",\"2020-04-01\",\"095555555\",\"qqq@mail.com\",50");
+			   fw.write("1,\"AA\",\"M\",\"2020-01-01\",\"0912345678\",\"abc@mail.com\",30000");
+			   fw.write("4\"FF\",\"F\",\"2020-07-01\",\"095535545\",\"qoq@mail.com\",80");
+			   fw.write("3\"GG\",\"M\",\"2019-10-11\",\"092554822\",\"asw@mail.com\",27000");
+			   fw.write("1\"JJ\",\"F\",\"2000-11-11\",\"094751233\",\"egse@mail.com\",42000");
+			   fw.write("2\"II\",\"M\",\"2011-04-08\",\"0917814678\",\"fgc@mail.com\",32000");
+			   
+			   fw.close();
+	}
+	
+	catch(IOException e) {
+		System.out.print("錯了");
+	}
+}
+}

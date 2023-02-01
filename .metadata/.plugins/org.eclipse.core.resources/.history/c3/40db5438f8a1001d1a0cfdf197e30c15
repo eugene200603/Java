@@ -1,0 +1,20 @@
+package homework5_4;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Filewrite {
+
+	public static void main(String[] args) {
+		try {
+			FileWriter fw=new FileWriter("C:\\javagit\\file\\Employee.txt");
+			   fw.write("AA\",\"M\",\"2020-01-01\",\"0912345678\",\"abc@mail.com\",30000);
+			   
+			   fw.close();
+	}
+	
+	catch(IOException e) {
+		System.out.print("錯了");
+	}
+}
+}

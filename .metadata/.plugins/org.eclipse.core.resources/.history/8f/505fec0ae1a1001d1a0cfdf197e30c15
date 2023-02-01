@@ -1,0 +1,30 @@
+package homework5_3;
+
+public class test {
+
+	public static void main(String[] args) {
+	try {
+		Stack s=new Stack();
+		s.pop();
+            s.push(0);
+            s.push(9);
+            s.pop();
+            s.push(5);
+            s.pop();s.pop();s.pop();
+            s.push(5);
+            s.push(4);
+            s.pop();
+            s.push(1);
+            s.pop();
+            s.pop();
+            s.pop();
+            
+	}
+		catch (StackFullException e){
+			System.out.println("滿了");			
+		}
+	  catch (StackEmptyException e){
+		System.out.println("空了");
+	}
+	}
+}

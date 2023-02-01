@@ -1,0 +1,38 @@
+//4.	檔案和集合的練習-EmployeeFile
+//改寫Employee作業，將hard code在程式裡的資料，改由檔案輸入。
+//提示：
+//a.	每一列資料代表一個員工所有的資料
+//b.	檔案裡的每一列資料沒有特定順序
+//c.	在檔案裡可增加一個職位別來表示不同的職位
+//d.	使用String類別的split()將字串切成tokens
+//e.	使用ArrayList取代陣列來存放資料
+
+
+package homework5_4;
+import java.io.*;
+public class EmployeeFile {
+	public static void main(String arg[]) {
+try {
+	File dir=new File("C:\\javagit\\file");
+   dir.mkdir();
+   File file=new File(dir,"Employee.txt");
+   file.createNewFile();
+   
+   
+   
+//   FileInputStream fis=new FileInputStream(file);
+//    BufferedInputStream bis=new BufferedInputStream(fis);
+//    byte[] data=new byte[bis.available()];
+//    bis.read(data);
+//    String str=new String(data);
+//    System.out.println(str);
+//     bis.close();
+//    fis.close();
+   
+   
+}
+catch(IOException e) {
+	
+}
+ }   
+}

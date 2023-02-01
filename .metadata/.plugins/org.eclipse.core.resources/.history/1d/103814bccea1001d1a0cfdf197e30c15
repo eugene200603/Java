@@ -1,0 +1,5 @@
+package homework5_3;
+
+public class StackFullException {
+    
+}
