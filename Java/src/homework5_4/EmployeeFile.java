@@ -34,18 +34,21 @@ try {
    
    FileReader fr=new FileReader("C:\\javagit\\file\\Employee.txt");
    BufferedReader br=new BufferedReader(fr);
-   byte[] data=new byte[fr.available()];
-   String str=fr.read(data);
-   String[] st=str.split(",");
-//    List emp=new ArrayList();
+   String str;
+   while(str=)
+    str=br.readLine();
+       String[] st=str.split(",");
+    //List emp=new ArrayList();
 
    for(String n:st) {
+	  
 	   System.out.print(n);
    }
   
    
    
-   r.close();
+   br.close();
+   fr.close();
 }
 catch(IOException e) {
 	
