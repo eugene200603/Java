@@ -10,6 +10,7 @@
 
 package homework5_4;
 import java.io.*;
+import java.util.*;
 public class EmployeeFile {
 	public static void main(String arg[]) {
 try {
@@ -35,12 +36,15 @@ try {
    FileReader fr=new FileReader("C:\\javagit\\file\\Employee.txt");
    BufferedReader br=new BufferedReader(fr);
    String str;
-   while(str=)
-    str=br.readLine();
-       String[] st=str.split(",");
+   List l=new ArrayList();
+   while((str=br.readLine())!=null) {
+	   l=str.split(",");
+   }
+    
+       
     //List emp=new ArrayList();
 
-   for(String n:st) {
+   for(String n:l) {
 	  
 	   System.out.print(n);
    }
