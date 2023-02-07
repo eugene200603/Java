@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author ispan
- *
- */
-module A {
-}

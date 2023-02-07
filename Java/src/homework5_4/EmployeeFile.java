@@ -9,18 +9,30 @@
 
 
 package homework5_4;
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 public class EmployeeFile {
 	public static void main(String arg[]) {
 try {
-	File dir=new File("C:\\javagit\\file");
+	File dir=new File("C:\\Java\\workspace\\file");
    dir.mkdir();
    File file=new File(dir,"Employee.txt");
    file.createNewFile();
-   
-   FileWriter fw=new FileWriter("C:\\javagit\\file\\Employee.txt");
+   read();
+  } catch(IOException e) {
+		
+     }  
+	} 
+   public static void write() throws IOException {
+	 
+   FileWriter fw = new FileWriter("C:\\Java\\workspace\\file\\Employee.txt");
    BufferedWriter bfw=new BufferedWriter (fw);
+   
    bfw.write("3,\"CC\",\"F\",\"2020-03-01\",\"093333333\",\"eee@mail.com\",28000\n");
    bfw.write("2,\"BB\",\"M\",\"2020-02-01\",\"092222222\",\"www@mail.com\",25000\n");
    bfw.write("1,\"HH\",\"F\",\"2010-07-22\",\"093784513\",\"ghe@mail.com\",35000\n");
@@ -30,32 +42,38 @@ try {
    bfw.write("3,\"GG\",\"M\",\"2019-10-11\",\"092554822\",\"asw@mail.com\",27000\n");
    bfw.write("1,\"JJ\",\"F\",\"2000-11-11\",\"094751233\",\"egse@mail.com\",42000\n");
    bfw.write("2,\"II\",\"M\",\"2011-04-08\",\"0917814678\",\"fgc@mail.com\",32000\n");
-   bfw.close();
-   fw.close();
    
-   FileReader fr=new FileReader("C:\\javagit\\file\\Employee.txt");
-   BufferedReader br=new BufferedReader(fr);
+   bfw.close();
+   fw.close(); 
+	
+	
+   }
+   
+   public static void read() {
+	   
+   try(
+   FileReader fr=new FileReader("C:\\Java\\workspace\\file\\Employee.txt");
+   BufferedReader br=new BufferedReader(fr);){
    String str;
-   List l=new ArrayList();
+   
+   ArrayList<String> l=new ArrayList<String>();
+   
    while((str=br.readLine())!=null) {
-	   l=str.split(",");
-   }
-    
-       
-    //List emp=new ArrayList();
-
-   for(String n:l) {
-	  
-	   System.out.print(n);
-   }
+	   String[] split=str.split(",");
+   	for (int i = 0; i < split.length; i++) {
+   		String string=split[i];
+			System.out.println(string);	
+			
+   	}
+   
+   }  
+   	
+  }
+    catch(IOException e){
+    	
+    }
   
    
-   
-   br.close();
-   fr.close();
-}
-catch(IOException e) {
-	
-}
- }   
+   } 
+
 }
